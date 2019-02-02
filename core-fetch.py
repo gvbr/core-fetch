@@ -6,17 +6,17 @@ retroconfig = '~/.config/retroarch/retroarch.cfg'
 # buildbot url
 retrourl = 'https://buildbot.libretro.com'
 
-import argparse             # ArgumentParser
-import configparser         # ConfigParser
-import os                   # listdir, makedirs, utime
-import os.path as pth       # dirname, expanduser, join, normcase
-import platform             # machine
-import shutil               # copyfileobj
-import sys                  # argv, platform
-import tempfile             # NamedTemporaryFile
-import time                 # mktime, timezone
-import urllib.request       # urlopen
-import zipfile              # ZipFile
+import argparse
+import configparser
+import os
+import os.path as pth
+import platform
+import shutil
+import sys
+import tempfile
+import time
+import urllib.request
+import zipfile
 
 # parse arguments
 pars = argparse.ArgumentParser()
