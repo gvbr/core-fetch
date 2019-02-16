@@ -2,12 +2,12 @@
 
 Core and asset updater for retroarch.
 
-Downloads and extracts files from the libretro buildbot into the appropriate folders specified in your retroarch user configuration file.
+Downloads and extracts your current list of cores and/or asset files from the libretro buildbot into the appropriate folders specified by your retroarch user configuration file.
 
-Point to your config file with `-g retroarch.cfg` or within the script itself.
+Either point to your config file with `-g retroarch.cfg` or within the script itself.
 
-Fetch cores with `-c`, assets with `-s`, or both with `-a`.
+Update your current cores with `-c`, asset files with `-s`, or both with `-a`.
 
-Tested on linux and windows platforms.
+Use `-d` for a dry run and `-v` to display url targets and path destinations.
 
-Requires Python 3.
+Tested on Linux and Windows platforms. Requires Python 3.

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-# retroarch config file
+# user's retroarch configuration file
 retroconfig = '~/.config/retroarch/retroarch.cfg'
 
-# buildbot url
+# current buildbot url
 retrourl = 'https://buildbot.libretro.com'
 
 import argparse
@@ -45,7 +45,7 @@ if args.all:
     args.assets = True
     args.cores = True
 
-# asset names used in buildbot and config file
+# asset names used in the buildbot and config file
 itemlist = {
     'assets'           : 'assets_directory',
     'autoconfig'       : 'joypad_autoconfig_dir',
@@ -80,14 +80,14 @@ urlassets = pth.join(retrourl, 'assets/frontend')
 
 # get config path; expand unix home folders
 if args.config:
-    retroconfig = pth.normcase(pth.expanduser(args.config))
-else:
-    retroconfig = pth.normcase(pth.expanduser(retroconfig))
+    retroconfig = args.config
 
+retroconfig = pth.normcase(pth.expanduser(retroconfig))
 retrodir = pth.dirname(retroconfig)
 
 # retrieve paths from retroarch user config
 with open(retroconfig, 'r') as tmpconf:
+
     conf = configparser.ConfigParser()
     conf.read_string('[A]\n' + tmpconf.read())
 
